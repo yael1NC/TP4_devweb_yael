@@ -1,3 +1,5 @@
+## Lancer le serveur depuis une invite de commande (python3 -m http.server --bind 127.0.0.1 5000) ou un live serveur VScode
+
 ### Les projets KO (actuellement) sont : 
 
 https://github.com/Marak/faker.js
