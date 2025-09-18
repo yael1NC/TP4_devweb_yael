@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vérificateur GitHub — Async Checker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="hero-section">
+    <div class="container">
+      <div class="has-text-centered">
+        <h1 class="title is-2">Welcome to the Async Checker</h1>
+        <p class="subtitle">Click below to <strong>launch async checker!</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="control-panel">
+      <div class="columns is-vcentered">
+        <div class="column is-8">
+          <select id="file-selector" class="file-selector">
+            <option value="TheBody983-starred.json">TheBody983-starred.json</option>
+            <option value="Webcretaire-starred.json">Webcretaire-starred.json</option>
+            <option value="romulusFR-starred.json">romulusFR-starred.json</option>
+          </select>
+        </div>
+        <div class="column is-4">
+          <button id="btn-run" class="go-button is-fullwidth">
+            <div class="loading-spinner"></div>
+            Go!
+          </button>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <div class="progress-text">
+          <span id="progress-counter" class="mono">0 / 0</span>
+          <span id="rate-info" class="mono"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Token GitHub (optionnel)</label>
+        <div class="control">
+          <input id="gh-token" class="input" type="password" placeholder="ghp_xxx..." />
+        </div>
+        <p class="help">Sans token: ~60 req/h. Avec token: ~5000 req/h.</p>
+      </div>
+    </div>
+
+    <div class="output-section">
+      <div class="output-header">Output</div>
+      <div id="results-container"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
