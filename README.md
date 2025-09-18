@@ -1,4 +1,4 @@
-### Les projets KO sont : 
+### Les projets KO (actuellement) sont : 
 
 https://github.com/Marak/faker.js
 
